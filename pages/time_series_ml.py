@@ -182,9 +182,9 @@ fig.add_scatter(x=data_test.index, y=data_test['amount_p$_sum'], mode='lines', n
 
 # Update layout
 fig.update_layout(title='Train and Test Data',
-                  xaxis_title='Date',
+                  xaxis_title='Date in Weeks',
                   yaxis_title='Amount in Millions($)',
-                  legend_title='Data Type',
+                #   legend_title='Data Type',
                   height=400, width=800)
 
 # Show the plot
@@ -197,8 +197,8 @@ exog_cols.remove('amount_p$_sum')
 exog_cols.remove('reference_date')
 
 forecaster = ForecasterAutoreg(
-                 regressor        = XGBRegressor(random_state=42),
-                 lags             = 4 )
+                 regressor = XGBRegressor(random_state=42),
+                 lags = 4 )
 
 param_grid = {
     'n_estimators': [100, 500],
