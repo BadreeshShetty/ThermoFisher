@@ -11,3 +11,4 @@ skforecast==0.10.1
 statsmodels==0.14.0
 streamlit==1.29.0
 xgboost==1.7.3
+openpyxl==3.0.9
